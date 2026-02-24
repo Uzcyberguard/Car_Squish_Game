@@ -11,7 +11,10 @@ gif_files = [f"car{i}.gif" for i in range(1, 16)]
 for pic in gif_files:
 
     screen.addshape(pic)
-
+screen.register_shape("road.gif")
+tim3 = Turtle()
+tim3.shape("road.gif")
+tim3.resizemode()
 
 
 
