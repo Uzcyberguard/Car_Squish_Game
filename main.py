@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 from Road import Road2
 from cars import Cars
+from player import Player
 screen = Screen()
 
 
@@ -20,12 +21,8 @@ cars = Cars(gif_files)
 
 
 screen.tracer(0)
+player = Player()
 
-car = Turtle()
-car.shape(gif_files[8])
-car.penup()
-car.setheading(90)
-car.goto(0,-250)
 screen.tracer(1)
 
 go_r=False
@@ -73,10 +70,10 @@ def game():
    for k in cars.moving_cars:
        k.forward(6)
    global go_r,go_l
-   if go_r and car.xcor()<250:
-       car.goto(car.xcor() + 6, car.ycor())
-   if go_l and car.xcor()>-250:
-       car.goto(car.xcor() - 6, car.ycor())
+   if go_r and player.xcor()<250:
+       player.goto(player.xcor() + 6, player.ycor())
+   if go_l and player.xcor()>-250:
+       player.goto(player.xcor() - 6, player.ycor())
     #==========================================
    screen.tracer(1)
    #=====================================
@@ -85,7 +82,7 @@ def game():
    # =======================================================
 
    for cr in cars.moving_cars:
-       if abs(cr.xcor() - car.xcor()) < 25 and abs(cr.ycor() - car.ycor()) < 55:
+       if abs(cr.xcor() - player.xcor()) < 25 and abs(cr.ycor() - player.ycor()) < 55:
            # turtle.bye()
            return
        if cr.ycor()<-400:
