@@ -83,18 +83,15 @@ def game():
 
    for cr in cars.moving_cars:
        if abs(cr.xcor() - player.xcor()) < 25 and abs(cr.ycor() - player.ycor()) < 55:
-           # turtle.bye()
            return
        if cr.ycor()<-400:
 
            cars.moving_cars.remove(cr)
-           del cr
+           cr.ht()
    #         ==================================================
    n += 1
    if n > 60:
-
        cars.create_rand_cars()
-
        n = 0
    screen.tracer(1)
    screen.ontimer(game,15)
@@ -103,4 +100,4 @@ game()
 
 
 
-screen.exitonclick()
+screen.mainloop()
