@@ -1,6 +1,6 @@
 import random
 from turtle import Turtle, Screen
-class Cars():
+class Cars:
     def __init__(self,gifs):
 
         self.gifs = gifs
