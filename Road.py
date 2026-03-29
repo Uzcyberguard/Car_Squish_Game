@@ -15,7 +15,7 @@ class Road2():
             self.tim3.setheading(-90)
             self.tim4.setheading(-90)
             self.tim4.goto(0,640)
-            self.screen.tracer(1)
+            self.screen.update()
     def move(self):
          self.screen.tracer(0)
 

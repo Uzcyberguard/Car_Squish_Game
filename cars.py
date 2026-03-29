@@ -20,6 +20,6 @@ class Cars():
 
         for car in self.moving_cars[-7::]:
 
-            car.goto(positions[i],random.randint(300,600))
+            car.goto(positions[i],random.randint(400,700))
             car.setheading(-90)
             i+=1

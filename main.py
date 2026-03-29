@@ -55,7 +55,7 @@ screen.onkeyrelease(fun = stop_left,key="a" )
 
 screen.tracer(0)
 cars.create_rand_cars()
-screen.tracer(1)
+screen.update()
 
 n = 0
 
@@ -75,7 +75,7 @@ def game():
    if go_l and player.xcor()>-250:
        player.goto(player.xcor() - 6, player.ycor())
     #==========================================
-   screen.tracer(1)
+   screen.update()
    #=====================================
 
    screen.tracer(0)
@@ -93,7 +93,7 @@ def game():
    if n > 60:
        cars.create_rand_cars()
        n = 0
-   screen.tracer(1)
+   screen.update()
    screen.ontimer(game,15)
 game()
 
