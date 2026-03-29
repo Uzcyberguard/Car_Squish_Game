@@ -27,5 +27,5 @@ class Road2():
          if self.tim4.ycor()<=-640:
              self.tim4.goto(0,640)
 
-         self.screen.tracer(1)
+         self.screen.update()
 
