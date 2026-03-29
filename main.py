@@ -88,6 +88,7 @@ def game():
 
            cars.moving_cars.remove(cr)
            cr.ht()
+           del cr
    #         ==================================================
    n += 1
    if n > 60:
